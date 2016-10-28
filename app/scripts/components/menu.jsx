@@ -23,8 +23,6 @@ handleItemClick: function(item){
   //this.state.orderList.push(orderListClicked);
   this.state.orderList.add([orderItem]);
   this.setState({ orderList: this.state.orderList });
-
-
 },
 
   render: function(){

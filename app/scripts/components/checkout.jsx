@@ -5,14 +5,13 @@ var ReactDOM = require('react-dom');
 
 var CheckoutComponent = React.createClass({
   mixins: [Backbone.React.Component.mixin],
+  handleSubmit: function(e){
+    e.preventDefault();
 
-  totalPrice: function(){
-
+    this.props.orderList.each(function(order){
+      order.save()
+    });
   },
-  handleChange: function(){
-
-  },
-
   render: function(){
     var CheckoutListing = this.props.orderList.map(function(item){
       var name = item.get('name')
@@ -20,11 +19,19 @@ var CheckoutComponent = React.createClass({
       return(
         <li key={item.cid}>{name} {price}</li>
         )
-    })
+    });
+
+    var TotalPrice = this.props.orderList.reduce(function(acum, item){
+      acum += item.get('price')
+        return acum;
+        }, 0)
     return (
       <ul>
         <h1>Checkout Box</h1>
-        {CheckoutListing}
+        <p>{CheckoutListing}</p>
+        <p>{TotalPrice}</p>
+        <button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Submit</button>
+
       </ul>
     )
   }
