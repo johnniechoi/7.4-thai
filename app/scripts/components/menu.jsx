@@ -35,7 +35,7 @@ handleItemClick: function(item){
       var description = item.get('description');
       var price = item.get('price')
       return(
-      <li key={item.get('_id') || item.cid} className="well menuList" onClick={handleItemClick}>
+      <li key={item.get('_id') || item.cid} className="well menuList hvr-grow" onClick={handleItemClick}>
         <div >
           <p className="menuTitle">{`${dish}`}</p>
           <span> {`${description}`}</span>
