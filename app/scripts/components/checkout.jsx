@@ -7,7 +7,6 @@ var CheckoutComponent = React.createClass({
   mixins: [Backbone.React.Component.mixin],
   handleSubmit: function(e){
     e.preventDefault();
-
     this.props.orderList.each(function(order){
       order.save()
     });
@@ -15,9 +14,9 @@ var CheckoutComponent = React.createClass({
   render: function(){
     var CheckoutListing = this.props.orderList.map(function(item){
       var name = item.get('name')
-      var price = item.get('price')
+      var price = item.get('price');
       return(
-        <li key={item.cid}>{name} {price}</li>
+        <div key={item.cid} className="listing">{name} <div className="checkoutCost">${price.toFixed(2)}</div></div>
         )
     });
 
@@ -28,10 +27,11 @@ var CheckoutComponent = React.createClass({
     return (
       <ul>
         <h1>Checkout Box</h1>
-        <p>{CheckoutListing}</p>
-        <p>{TotalPrice}</p>
-        <button type="submit" className="btn btn-success" onClick={this.handleSubmit}>Submit</button>
-
+        <ul>{CheckoutListing}</ul>
+        <div className="totalCost row">Total: ${TotalPrice.toFixed(2)}</div>
+        <div className="buttondiv">
+          <button type="submit" className="button tick" onClick={this.handleSubmit}></button>
+        </div>
       </ul>
     )
   }

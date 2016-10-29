@@ -35,18 +35,27 @@ handleItemClick: function(item){
       var description = item.get('description');
       var price = item.get('price')
       return(
-      <li key={item.get('_id') || item.cid} className="well" onClick={handleItemClick}>
-        <div className>
-          <p>{`${dish}`}</p>
-          <span> {`${description} ${price}`}</span>
+      <li key={item.get('_id') || item.cid} className="well menuList" onClick={handleItemClick}>
+        <div >
+          <p className="menuTitle">{`${dish}`}</p>
+          <span> {`${description}`}</span>
+          <span className="menuCost"> ${`${price}`}</span>
         </div>
       </li>
       )
     })
 
     return (
-    <div>
-      <ul className="col-md-8">
+    <div className="">
+      <header className="header">
+        <div className="logo">
+          <img src="https://s-media-cache-ak0.pinimg.com/564x/73/02/7a/73027a78f5288ccf66d6cb524d18fdb0.jpg"></img>
+        </div>
+        <h1>Majestic Thai</h1>
+      </header>
+      <div className="image">
+      </div>
+      <ul className="col-md-8 right">
         {listOfDishes}
       </ul>
       <div className="col-md-4">

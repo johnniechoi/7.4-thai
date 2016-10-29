@@ -12,6 +12,193 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+li{
+  list-style: none;
+}
+
+body{
+  font-family: helvetica;
+}
+
 img {
   max-width: 100%;
 }
+
+h1{
+  display: inline-block;
+  color: #D1C4A9;
+  margin-top: 18px;
+  margin-bottom: 3px;
+}
+
+.header{
+  display: flex;
+}
+
+.logo{
+  height: 65px;
+  width: 86px;
+  margin-top: 6px;
+  margin-bottom: 5px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  z-index: 0;
+}
+
+.padding{
+  padding: 24px;
+}
+
+.image{
+  height: 521px;
+  background-image: url("https://d.ibtimes.co.uk/en/full/1444408/thai-elephant.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.title{
+  display: inline-block;
+}
+
+.right{
+  padding-top: 22px;
+}
+
+.well{
+  background-color: #A9A7A8;
+  border-radius: 0px;
+  opacity: 0.5;
+}
+
+.menuTitle{
+  color: white;
+  font-size: 22px;
+}
+
+.menuCost{
+  float: right;
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.listing{
+  font-size: 16px;
+  color: #A9AEB6;
+  display: flex;
+  padding: 5px, 0, 5px, 0;
+}
+
+.checkoutCost{
+margin-left: auto;
+}
+
+.totalCost{
+  font-size: 22px;
+  color: #A9AEB6;
+  float: right;
+}
+
+.buttondiv {
+  margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.button{
+			background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+			background-image: linear-gradient(top, #f4f1ee, #fff);
+			border-radius: 50%;
+			box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+			float:left;
+			height: 70px;
+			margin: 0 30px 30px 0;
+			position: relative;
+			width: 70px;
+			-webkit-transition: all .1s linear;
+			transition: all .1s linear;
+		}
+
+		.button:after{
+			color:#e9e6e4;
+			content: "";
+			display: block;
+			font-size: 30px;
+			height: 30px;
+			text-decoration: none;
+			text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+			position: absolute;
+			width: 30px;
+		}
+
+
+		.heart:after{
+			content: "❤";
+			left: 21px;
+			top: 21px;
+		}
+
+		.flower:after{
+			content: "✿";
+			left: 23px;
+			top: 19px;
+		}
+
+		.tick:after{
+			content: "✔";
+			left:23px;
+			top:20px;
+		}
+
+		.cross:after{
+			content: "✖";
+			left: 24px;
+			top: 19px;
+		}
+
+		.button:hover{
+			background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+			background-image: linear-gradient(top, #fff, #f4f1ee);
+			color:#0088cc;
+		}
+
+		.heart:hover:after{
+			color:#f94e66;
+			text-shadow:0px 0px 6px #f94e66;
+		}
+
+		.flower:hover:after{
+			color:#f99e4e;
+			text-shadow:0px 0px 6px #f99e4e;
+		}
+
+		.tick:hover:after{
+			color:#83d244;
+			text-shadow:0px 0px 6px #83d244;
+		}
+
+		.cross:hover:after{
+			color:#eb2f2f;
+			text-shadow:0px 0px 6px #eb2f2f;
+		}
+
+
+
+		.button:active{
+			background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+			background-image: linear-gradient(top, #efedec, #f7f4f4);
+			box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+		}
+
+		.button:active:after{
+			color:#dbd2d2;
+			text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+		}
