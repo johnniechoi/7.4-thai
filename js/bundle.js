@@ -82,7 +82,7 @@ handleItemClick: function(item){
       var description = item.get('description');
       var price = item.get('price')
       return(
-      React.createElement("li", {key: item.get('_id') || item.cid, className: "well menuList", onClick: handleItemClick}, 
+      React.createElement("li", {key: item.get('_id') || item.cid, className: "well menuList hvr-grow", onClick: handleItemClick}, 
         React.createElement("div", null, 
           React.createElement("p", {className: "menuTitle"}, `${dish}`), 
           React.createElement("span", null, " ", `${description}`), 
